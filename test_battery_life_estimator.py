@@ -1,6 +1,7 @@
 import logging
 import pytest
 import pandas as pd
+import numpy
 from battery_life_estimator import import_data, calc_battery_life, calc_power
 
 logging.basicConfig(

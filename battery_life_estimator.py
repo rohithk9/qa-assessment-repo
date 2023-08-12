@@ -8,6 +8,7 @@ Date: August 11th, 2023
 # import libraries
 import pandas as pd
 import logging
+import numpy
 
 logging.basicConfig(
     filename="battery_life_estimator_results.log",
