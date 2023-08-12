@@ -4,4 +4,4 @@ python:
 install:
  - "pip install -r requirements.txt"
  - "pip install pytest==7.4.0"
-script: python -m pytest
+script: pytest
