@@ -5,8 +5,7 @@ import numpy
 from battery_life_estimator import import_data, calc_battery_life, calc_power
 
 logging.basicConfig(
-    filename="test_battery_life_estimator.log",
-    encoding='utf-8',
+    filename="test_battery_life_estimator.log", 
     level=logging.INFO,
     filemode='w',
     format='%(name)s - %(levelname)s - %(message)s',

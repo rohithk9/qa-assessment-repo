@@ -11,8 +11,7 @@ import logging
 import numpy
 
 logging.basicConfig(
-    filename="battery_life_estimator_results.log",
-    encoding='utf-8',
+    filename="battery_life_estimator_results.log", 
     level=logging.INFO,
     filemode='w',
     format='%(name)s - %(levelname)s - %(message)s',
