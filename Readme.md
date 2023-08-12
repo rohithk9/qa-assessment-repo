@@ -5,7 +5,9 @@
 # Project Tree
 ```.
 .
+├── .travis.yml
 ├── Readme.md
+├── __init__.py
 ├── battery_life_estimator.py
 ├── battery_life_estimator_results.log
 ├── data
