@@ -4,4 +4,9 @@ python:
 install:
  - "pip install -r requirements.txt"
  - "pip install pytest"
-script: pytest
+script: pytest --junitxml=pytest-report-$TRAVIS_BUILD_NUMBER.xml
+after_script:
+ - mv pytest-report-$TRAVIS_BUILD_NUMBER.xml $TRAVIS_BUILD_DIR
+after_success:
+ - tar -czvf test_reports.tar.gz pytest-report-$TRAVIS_BUILD_NUMBER.xml
+ - mv test_reports.tar.gz $TRAVIS_BUILD_DIR
