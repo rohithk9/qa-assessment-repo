@@ -10,3 +10,9 @@ after_script:
 after_success:
  - tar -czvf test_reports.tar.gz pytest-report-$TRAVIS_BUILD_NUMBER.xml
  - mv test_reports.tar.gz $TRAVIS_BUILD_DIR
+notifications:
+  email:
+    recipients:
+      - rohit.kulkarni29@gmail.com
+    on_success: always
+    on_failure: always
