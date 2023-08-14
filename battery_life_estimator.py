@@ -13,7 +13,7 @@ import numpy
 logging.basicConfig(
     filename="battery_life_estimator_results.log", 
     level=logging.INFO,
-    filemode='w',
+    filemode='w+',
     format='%(name)s - %(levelname)s - %(message)s',
     force=True)
 
@@ -42,6 +42,7 @@ def calc_power(dataframe):
     output:
             dataframe: pandas dataframe with new column for time interval and power consumed in ampere hours
     """
+    #assuming the timestamp has a precision of nanoseconds
     dataframe['time_interval_hours'] = (dataframe['Timestamp'] - dataframe['Timestamp'].shift(1)) / 1e9 / 3600.0
     dataframe['Power-Ah'] = dataframe['Current(A)'] * dataframe['time_interval_hours']
 
@@ -62,7 +63,7 @@ def calc_battery_life(dataframe, batt_capacity):
     logging.info("Minimum current drawn in Amperes by device is: %f", min_current)
 
 
-    # Calculating time interval for total energy consumption
+    # Calculating time interval for total energy consumption 
     time_interval = (dataframe['Timestamp'].max() - dataframe['Timestamp'].min()) / 1e9 / 3600.0
 
     if time_interval <= 0.0:
