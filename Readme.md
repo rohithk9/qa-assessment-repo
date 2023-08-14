@@ -1,6 +1,6 @@
 [![Build Status](https://app.travis-ci.com/rohithk9/qa-assessment-repo.svg?branch=master)](https://app.travis-ci.com/rohithk9/qa-assessment-repo)
 
-# This Project is based on an assessment done for a Firmware QA Engineer position at [XYZ] Company
+# This Project is based on an assessment done for a Firmware QA Engineer position at a Company
 
 # Project Tree
 ```.
