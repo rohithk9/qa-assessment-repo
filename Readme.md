@@ -5,13 +5,15 @@
 # Project Tree
 ```.
 .
-├── .travis.yml
 ├── Readme.md
 ├── __init__.py
 ├── battery_life_estimator.py
 ├── battery_life_estimator_results.log
+├── conftest.py
 ├── data
 │   └── sampleData.csv
+├── pytest-report.xml
+├── pytest.ini
 ├── requirements.txt
 ├── test_battery_life_estimator.log
 └── test_battery_life_estimator.py
